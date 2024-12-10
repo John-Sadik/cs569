@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 30px; /* Increased padding for a larger container */
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Container width */
+    text-align: center;
+}
+
+h1 {
+    color: #007bff; /* Venmo blue color */
+    text-transform: lowercase; /* Makes the text lowercase */
+    margin: 0;
+}
+
+.login-heading {
+    font-size: 20px; /* Adjust size as needed */
+    margin: 20px 0 20px; /* Increased space between title and form */
+    font-weight: normal; /* Ensure text is not bold */
+}
+
+.input-group {
+    margin-bottom: 20px; /* Space below the input box */
+}
+
+input {
+    padding: 15px; /* Increased padding for a taller input box */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded edges */
+    font-size: 14px;
+    width: 100%; /* Full width input box */
+    max-width: 100%; /* Remove maximum width to match button size */
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+button {
+    padding: 15px; /* Increased padding for taller buttons */
+    border: none;
+    border-radius: 20px; /* Rounded corners for buttons */
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Full width button */
+    margin-top: 10px; /* Space between buttons */
+}
+
+.next-button {
+    background-color: #007bff; /* Venmo blue color */
+    color: white;
+}
+
+.sign-up-button {
+    background-color: white; /* White background */
+    color: #007bff; /* Blue text color */
+    border: 1px solid #007bff; /* Blue border */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.sign-up-button:hover {
+    background-color: #f5f5f5; /* Light gray background on hover */
+    color: #0056b3; /* Darker blue text color on hover */
+    border: 1px solid #0056b3; /* Darker blue border on hover */
+}
+
+.footer-text {
+    margin-top: 10px;
+    color: #007bff;
+    cursor: pointer;
+}
