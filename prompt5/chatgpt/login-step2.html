@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venmo Login - Step 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Venmo</h1>
+            <h2>Log In</h2>
+        </div>
+        <div class="username-display">
+            <p id="display-username"></p>
+            <a href="#" class="change-link">Change</a>
+        </div>
+        <form action="#" method="post" class="login-form">
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="next-button">Log In</button>
+            <button type="button" class="signup-button">Sign Up</button>
+        </form>
+    </div>
+    <script>
+        // Retrieve the username from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+
+        // Display the username on the second step page
+        document.getElementById('display-username').textContent = username ? `Username: ${username}` : '';
+    </script>
+</body>
+</html>
