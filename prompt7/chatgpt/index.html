@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venmo Phishing Simulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        h2 {
+            margin: 10px 0 20px 0;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00C3F2; /* Venmo color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #009bbf; /* Darker shade for hover */
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+        }
+        .signup-button {
+            background-color: #e0e0e0;
+            color: #333;
+            margin-top: 10px;
+        }
+        .signup-button:hover {
+            background-color: #d0d0d0; /* Slightly darker for hover */
+        }
+        .change-link {
+            color: #00C3F2;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <h1>Venmo</h1>
+        <h2>Log In</h2>
+        <form id="phishingForm" onsubmit="handleUsernameSubmit(event)">
+            <input type="text" id="username" placeholder="Enter email, mobile, or username" required>
+            <button type="submit">Next</button>
+            <button type="button" class="signup-button" onclick="location.href='#'">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        function handleUsernameSubmit(event) {
+            event.preventDefault(); // Prevent actual form submission
+            const username = document.getElementById('username').value;
+
+            // Hide the username form and show the password form
+            document.getElementById('loginContainer').innerHTML = `
+                <h1>Venmo</h1>
+                <h2>Log In</h2>
+                <p>${username} <span class="change-link" onclick="changeUsername()">Change</span></p>
+                <form id="passwordForm" onsubmit="handlePasswordSubmit(event)">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <a href="#" style="display: block; margin: 10px 0; font-size: 12px; color: #00C3F2;">Forgot password?</a>
+                    <button type="submit">Log In</button>
+                    <button type="button" class="signup-button" onclick="location.href='#'">Sign Up</button>
+                </form>
+            `;
+        }
+
+        function changeUsername() {
+            const newUsername = prompt("Enter your email, mobile, or username:");
+            if (newUsername) {
+                document.getElementById('username').value = newUsername;
+            }
+        }
+
+        function handlePasswordSubmit(event) {
+            event.preventDefault(); // Prevent actual form submission
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Here you can simulate storing the captured credentials or logging them
+            console.log(`Username: ${username}, Password: ${password}`);
+            
+            alert("Login successful! (for testing purposes only)");
+            // Redirect or do something else as needed
+        }
+    </script>
+</body>
+</html>
+
