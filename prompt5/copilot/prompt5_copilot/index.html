@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Venmo</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script>
+      function showPasswordInput() {
+        var emailInput = document.getElementById("email");
+        var passwordInput = document.getElementById("password");
+        var forgotPassword = document.getElementById("forgot-password");
+
+        if (emailInput.value) {
+          passwordInput.style.display = "block";
+          forgotPassword.style.display = "block";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="login-container">
+      <h1 style="color: rgb(91, 209, 215)">venmo</h1>
+      <p style="text-align: center; color: rgb(91, 209, 215)">Log in</p>
+      <form onsubmit="showPasswordInput(); return false;">
+        <label for="email"></label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Enter email, mobile, or username"
+          required
+        />
+
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+          style="display: none"
+        />
+
+        <button type="submit">Next</button>
+        <button type="submit">Sign up</button>
+        <p id="forgot-password" style="display: none; color: rgb(91, 209, 215)">
+          Forgot password?
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
