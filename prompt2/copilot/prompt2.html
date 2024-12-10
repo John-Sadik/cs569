@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" id="facebook" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log into Facebook</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="facebook-logo">facebook</div>
+    <div class="login-box">
+      <form onsubmit="return redirectToFacebook()">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Log In</button>
+        <div class="extra-options">
+          <a href="https://www.facebook.com/recover/initiate">Forgot Password?</a>
+        </div>
+        <button class="create-account" onclick="window.location.href='https://www.facebook.com/r.php'">Create New Account</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    function redirectToFacebook() {
+      window.location.href = 'https://www.facebook.com/login.php/';
+      return false;
+    }
+  </script>
+</body>
+</html>
