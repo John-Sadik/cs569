@@ -1,0 +1,61 @@
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for horizontal layout */
+    width: 90%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    justify-content: center; /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    height: 100vh; /* Make the container take up full viewport height */
+}
+
+.left-side {
+    width: 50%; /* Adjust width as needed */
+    padding-right: 30px; /* Add space between left and right sides */
+    text-align: left;
+}
+
+.right-side {
+    width: 35%; /* Adjust width as needed */
+    text-align: left;
+}
+
+.logo {
+    font-size: 3em;
+    color: #1877F2;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #1877F2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1877F2;
+  }
