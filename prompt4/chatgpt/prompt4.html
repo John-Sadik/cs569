@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .facebook-logo {
+            font-size: 40px;
+            color: #1877f2;
+            font-weight: bold;
+            text-transform: lowercase;
+            margin-bottom: 20px;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            color: black;
+            font-weight: normal;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="text"], input[type="password"] {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .login-btn {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+        }
+        .login-btn:hover {
+            background-color: #1458a0;
+        }
+        .forgot-password, .or {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .create-account {
+            padding: 10px;
+            background-color: #42b72a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+        }
+        .create-account:hover {
+            background-color: #36a420;
+        }
+    </style>
+</head>
+<body>
+    <div class="facebook-logo">facebook</div>
+    <div class="login-container">
+        <h2>Log Into Facebook</h2>
+        <form action="#" method="post">
+            <input type="text" placeholder="Email or phone" required>
+            <input type="password" placeholder="Password" required>
+            <button class="login-btn" type="submit">Log In</button>
+            <div class="forgot-password"><a href="#">Forgot password?</a></div>
+            <div class="or">or</div>
+            <button class="create-account">Create New Account</button>
+        </form>
+    </div>
+</body>
+</html>
