@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 60%;
+            max-width: 500px;
+            padding: 50px;
+            text-align: center;
+            border: 1px solid #ddd;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 20px;
+        }
+        .logo {
+            font-size: 3rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .login-text {
+            font-size: 1.5rem;
+            color: black;
+            margin-bottom: 30px;
+        }
+        input[type="text"] {
+            padding: 15px;
+            width: 75%;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .round-button {
+            padding: 15px;
+            width: 80%;
+            margin: 10px 0;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .next-button {
+            background-color: #007bff;
+            color: white;
+        }
+        .next-button:hover {
+            background-color: #0056b3;
+        }
+        .signup-button {
+            background-color: white;
+            color: #007bff;
+            border: 2px solid #007bff;
+        }
+        .signup-button:hover {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">Venmo</div>
+        <div class="login-text">Log in</div>
+        <form id="emailForm">
+            <input type="text" id="email" placeholder="Enter email, mobile, or username " required>
+            <div class="button-container">
+                <button type="submit" class="round-button next-button">Next</button>
+                <button type="button" class="round-button signup-button">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            
+            if (email) {
+                // Redirect to password page with the email
+                window.location.href = 'password.html?email=' + encodeURIComponent(email);
+            }
+        });
+
+        // Sign Up button click handler (add your redirect or action here)
+        document.querySelector('.signup-button').addEventListener('click', function() {
+            // Redirect to sign-up page
+            window.location.href = 'signup.html';
+        });
+    </script>
+
+</body>
+</html>

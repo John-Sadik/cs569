@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align items to the top */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-logo {
+            text-align: center;
+            font-size: 24px;
+            color: #1877F2;
+            margin-top: 50px; /* Add some space from the top */
+            font-weight: bold;
+        }
+        .login-container {
+            width: 300px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px; /* Add space between logo and login box */
+        }
+        .login-title {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .login-form input {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .login-button {
+            background-color: #1877F2; /* Adjusted color */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .login-button:hover {
+            background-color: #145dbf;
+        }
+        .forgot-account {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+        .separator {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        .separator::before, .separator::after {
+            content: '';
+            background: #ddd;
+            height: 1px;
+            width: 40%;
+            position: absolute;
+            top: 50%;
+        }
+        .separator::before {
+            left: 0;
+        }
+        .separator::after {
+            right: 0;
+        }
+        .create-account {
+            background-color: #42b72a;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            justify-content: center; /* Centering */
+            align-items: center; /* Centering */
+            margin: 0 auto; /* Centering */
+        }
+        .create-account:hover {
+            background-color: #36a420;
+        }
+        .bottom-container {
+            width: 100%;
+            background-color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+            position: absolute;
+            bottom: 0;
+        }
+        .bottom-container .languages,
+        .bottom-container .links,
+        .bottom-container .meta {
+            font-size: 12px;
+            color: #737373;
+            margin: 5px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .bottom-container .links {
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .bottom-container .links p {
+            max-width: 600px; /* Limit the width of the text */
+            margin: auto;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-logo">facebook</div>
+    <div class="login-container">
+        <div class="login-title">Log Into Facebook</div>
+        <form class="login-form">
+            <input type="text" placeholder="Email or Phone Number" required>
+            <input type="password" placeholder="Password" required>
+            <button class="login-button" type="submit">Log In</button>
+        </form>
+        <div class="forgot-account">
+            <a href="#">Forgot account?</a>
+        </div>
+        <div class="separator">or</div>
+        <button class="create-account">Create new account</button>
+    </div>
+    <div class="bottom-container">
+        <div class="languages">
+            <p>English (US) Español Français (France) 中文(简体) العربية Português (Brasil) Italiano 한국어 Deutsch हिंदी 日本語</p>
+        </div>
+        <div class="links">
+            <p>Sign Up Log In Messenger Facebook Lite Video Places Games Marketplace Meta Pay Meta Store Meta Quest Ray-Ban Meta Meta AI Instagram Threads Fundraisers Services Voting Information Center Privacy Policy Consumer Health Privacy About Create ad Create Page Developers Careers Cookies Ad choices Terms Help Contact Uploading & Non-Users</p>
+        </div>
+        <div class="meta">
+            <p>Meta © 2024</p>
+        </div>
+    </div>
+</body>
+</html>

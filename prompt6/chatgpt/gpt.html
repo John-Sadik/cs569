@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Venmo Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-container {
+            width: 550px;
+            height: 550px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-container img {
+            margin-bottom: 30px;
+        }
+        .login-container h2 {
+            color: #007aff;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #007aff;
+            border: none;
+        }
+        .btn-outline-primary {
+            border: 1px solid #007aff;
+            color: #007aff;
+        }
+        .btn-outline-primary:hover {
+            background-color: #007aff;
+            color: white;
+        }
+        .form-control {
+            border-radius: 6px;
+            height: 50px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        form {
+            width: 100%;
+        }
+        /* Hide the second step form initially */
+        #password-step {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <img src="venmo-logo.png" alt="Venmo Logo" width="150">
+
+        <!-- First step: Username input -->
+        <div id="username-step">
+            <h2>Log in</h2>
+            <form id="usernameForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="email" placeholder="Enter email, mobile, or username" required>
+                </div>
+                <button type="button" class="btn btn-primary btn-block" onclick="nextStep()">Next</button>
+                <button type="button" class="btn btn-outline-primary btn-block">Sign up</button>
+            </form>
+        </div>
+
+        <!-- Second step: Password input -->
+        <div id="password-step">
+            <h2>Log in</h2>
+            <p><span id="displayUsername">the_user_name</span> <a href="#" onclick="goBack()">Change</a></p>
+            <form id="passwordForm">
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                </div>
+                <a href="#">Forgot password?</a>
+                <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                <button type="button" class="btn btn-outline-primary btn-block">Sign up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to go to the next step (password page)
+        function nextStep() {
+            // Get the entered username
+            var username = document.getElementById('email').value;
+            if (username) {
+                // Hide the username form
+                document.getElementById('username-step').style.display = 'none';
+                // Show the password form
+                document.getElementById('password-step').style.display = 'block';
+                // Set the username on the password page
+                document.getElementById('displayUsername').textContent = username;
+            }
+        }
+
+        // Function to go back to the username form
+        function goBack() {
+            document.getElementById('username-step').style.display = 'block';
+            document.getElementById('password-step').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
