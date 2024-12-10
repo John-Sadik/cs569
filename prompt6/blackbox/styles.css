@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: white;
+    padding: 40px; /* Increased padding for more space */
+    border-radius: 10px; /* Slightly larger border radius */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Slightly larger shadow */
+    text-align: center; /* Center align text */
+    width: 400px; /* Set a fixed width */
+    max-width: 90%; /* Responsive max width */
+}
+
+.logo {
+    color: #007bff; /* Updated to match the login button color */
+    font-size: 36px; /* Adjust size as needed */
+    font-weight: bold; /* Make it bold */
+    margin: 0; /* Remove default margin */
+}
+
+.login-text {
+    color: black; /* Black text for Log In */
+    font-size: 18px; /* Adjust size as needed */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Existing styles remain unchanged */
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Blue background for login button */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Make buttons round */
+    cursor: pointer;
+    margin-top: 10px; /* Add space above the button */
+    text-align: center; /* Center text */
+}
+
+.signup-button {
+    background-color: white; /* White background for sign up button */
+    color: #007bff; /* Blue text for sign up button */
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 25px; /* Make the sign up button round */
+    margin-top: 10px; /* Space above the Sign Up button */
+}
+
+/* Center the buttons */
+.login-container button,
+.login-container .signup-button {
+    display: block; /* Make buttons block elements */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+/* Add styles for the forgot password link */
+.forgot-password {
+    display: block; /* Make it a block element */
+    margin: 15px 0; /* Add space above and below */
+    color: #007bff; /* Blue color for the link */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px; /* Font size for the link */
+    text-align: center; /* Center the link */
+}
+
+.forgot-password:hover {
+    text-decoration: underline; /* Underline on hover */
+}
