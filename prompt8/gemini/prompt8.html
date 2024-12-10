@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Venmo Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="venmo-title">venmo</h1>
+        <p class="login-text">Log in</p>
+        <form id="signInForm">
+            <div class="input-container">
+                <input type="text" id="username" name="username" placeholder="Email, mobile, or username" required
+                    class="rounded-input"><br><br>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="rounded-button">Next</button><br>
+                <button class="rounded-button signup-button">Sign up</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const signInForm = document.getElementById('signInForm');
+
+        signInForm.addEventListener('submit', (event) =>
+        {
+            event.preventDefault(); // Prevent default form submission
+
+            // Assuming validation passes, redirect to the desired website
+            window.location.href = 'your_second_file.html'; // Replace with the URL of your second HTML file
+        });
+    </script>
+</body>
+
+</html>

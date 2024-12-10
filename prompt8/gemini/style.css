@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.container {
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #d3d3d3; /* Reduced border weight */
+    border-radius: 5px; /* Added border radius */
+}
+
+.rounded-input {
+    padding: 15px;
+    border-radius: 5px;
+    width: 85%;
+    height: 30px;
+    border: 1px solid #d3d3d3; /* Reduced border weight */
+    border-radius: 5px; /* Added border radius */
+}
+
+
+.input-container {
+    width: 90%;
+    padding: 10px 20px;
+}
+
+.venmo-title {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: blue;
+    text-transform: lowercase;
+}
+
+.login-text {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.rounded-button {
+    border-radius: 20px;
+    padding: 15px;
+    width: 85%;
+    height: 45px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.rounded-button:hover {
+    background-color: #005ca7; /* Darker shade of blue */
+}
+.signup-button {
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+}
+.signup-button:hover {
+    background-color: #005ca7; /* Darker shade of blue */
+    border: 2px solid #005ca7; /* Darker shade of blue border */
+    color: white; /* White text */
+}
+
+.next-button {
+    background-color: blue;
+    color: white;
+}
+
+.rounded-input::placeholder {
+    font-size: 16px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5px;
+}
