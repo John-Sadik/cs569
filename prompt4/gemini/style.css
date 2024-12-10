@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.left-side {
+    text-align: left;
+    padding: 100px;
+}
+
+.facebook-text {
+    color: #1877F2;  /* Color for "Facebook" */
+}
+
+.connect-text {
+    color: #000000;  /* Color for the other text */
+}
+
+.right-side {
+    width: 300px;
+    padding: 50px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Rest of the CSS remains the same */
+
+.login-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 108%;
+    padding: 10px;
+    background-color: #1877F2;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #1877F2; /* Or the same color as your buttons */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.create-account-button {
+    background-color: #42b72a;
+    color: white;
+    width: 54%;
+    /* Other styles for the button */
+}
