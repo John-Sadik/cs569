@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign In</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script>
+      function showPasswordInput() {
+        var emailInput = document.getElementById("email");
+        var passwordInput = document.getElementById("password");
+        var nextButton = document.getElementById("next-btn");
+
+        if (emailInput.value) {
+          passwordInput.style.display = "block";
+          nextButton.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="login-container">
+      <h1 class="venmo-text">Venmo</h1>
+      <h1>Log In</h1>
+      <form onsubmit="showPasswordInput(); return false;">
+        <label for="email">Email, mobile, or username</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Enter email, mobile, or username"
+          required
+        />
+
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+          style="display: none"
+        />
+
+        <button type="submit" id="next-btn">Next</button>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </body>
+</html>
